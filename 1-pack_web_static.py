@@ -10,6 +10,9 @@ import os
 
 
 def do_pack():
+    """
+    Generate .tgs compress.
+    """
     try:
         if not os.path.exists("versions"):
             local('mkdir versions')
