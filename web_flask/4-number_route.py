@@ -46,5 +46,16 @@ def path_python_custom(custom):
     return "Python {}".format(custom.replace('_', ' '))
 
 
+@app.route('/number/<int:number>', strict_slashes=False)
+def path_number_custom(number):
+    """
+    Function that display custom *int* on screen.
+    * Web route custom (/number/<number>).
+    Args:
+        number (int): Custom number (/<int:number> -> parameter)
+    """
+    return "{} is a number".format(number)
+
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
