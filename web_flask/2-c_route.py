@@ -26,7 +26,8 @@ def path_hbnb():
 @app.route('/c/<custom>', strict_slashes=False)
 def path_c_custom(custom):
     """
-    Function that display custom text on screen - web route custom (/c/<custom>).
+    Function that display custom text on screen.
+    * Web route custom (/c/<custom>).
     """
     return 'C %s' % custom.replace('_', ' ')
 

@@ -26,7 +26,8 @@ def path_hbnb():
 @app.route('/c/<custom>', strict_slashes=False)
 def path_c_custom(custom):
     """
-    Function that display custom text on screen - web route custom (/c/<custom>).
+    Function that display custom text on screen.
+    * Web route custom (/c/<custom>).
     """
     return 'C %s' % custom.replace('_', ' ')
 
@@ -35,7 +36,8 @@ def path_c_custom(custom):
 @app.route('/python/<path:custom>', strict_slashes=False)
 def path_python_custom(custom):
     """
-    Function that display custom text on screen - web route custom (/c/<text>).
+    Function that display custom text on screen.
+    * Web route custom (/c/<text>).
     """
     return "Python {}".format(custom.replace('_', ' '))
 
