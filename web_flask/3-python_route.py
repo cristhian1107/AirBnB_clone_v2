@@ -31,5 +31,14 @@ def path_c_custom(custom):
     return 'C %s' % custom.replace('_', ' ')
 
 
+@app.route('/python', defaults={'custom': 'is cool'}, strict_slashes=False)
+@app.route('/python/<path:custom>', strict_slashes=False)
+def path_python_custom(custom):
+    """
+    Function that display custom text on screen - web route custom (/c/<text>).
+    """
+    return "Python {}".format(custom.replace('_', ' '))
+
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
