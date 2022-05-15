@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 @app.route('/states', defaults={'id': None}, strict_slashes=False)
 @app.route('/states/<path:id>', strict_slashes=False)
-def states(id):
+def path_states_list(id):
     """ Function display en templated state list """
     all_states = storage.all(State)
 
@@ -28,16 +28,6 @@ def states(id):
             items=all_states[_state])
 
     return render_template('9-states.html', items=None)
-
-
-@app.route('/cities_by_states', strict_slashes=False)
-def path_states_list():
-    """ Function display en templated state list """
-    all_states = storage.all(State)
-    return render_template(
-        '8-cities_by_states.html',
-        items=all_states.values()
-    )
 
 
 @app.teardown_appcontext
