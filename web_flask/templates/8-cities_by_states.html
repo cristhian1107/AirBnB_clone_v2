@@ -6,7 +6,7 @@
 </HEAD>
 
 <BODY>
-  <H1>{{Table}}</H1>
+  <H1>States</H1>
   <UL>
     {%for state in items | sort(attribute='name')%}
     <LI>{{ state.id }}: <B>{{ state.name }}</B>
